@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Interstitials</title>
+
+    <link type="text/css" href="ui/css/global/reset.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/chosen.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/general.css" rel="stylesheet">
+
+    <!--<link type="text/css" href="ui/css/global/booking_engine.css" rel="stylesheet">-->
+    <link type="text/css" href="ui/css/global/jquery-ui.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/jquery-ui-custom-styles.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/booking_eng_interstitials.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/tooltip.css" rel="stylesheet">
+    <link type="text/css" href="ui/css/global/table.css" rel="stylesheet">
+
+    <script src="ui/js/jquery.v1.11.0.js" type="text/javascript"></script>
+    <script src="ui/js/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="ui/js/main.js" type="text/javascript"></script>
+    <script src="ui/js/jquery-ui.js" type="text/javascript"></script>
+    <script src="ui/js/tooltip.js" type="text/javascript"></script>
+
+    <script src="ui/js/fileupload/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="ui/js/fileupload/jquery.iframe-transport.js" type="text/javascript"></script>
+    <script src="ui/js/fileupload/jquery.fileupload.js" type="text/javascript"></script>
+
+    <!--<script src="ui/js/booking_eng_interstitials.js" type="text/javascript"></script>-->
+    <script src="ui/js/booking_eng_premium_banners.js" type="text/javascript"></script>
+    <script src="ui/js/booking_eng_validation.js" type="text/javascript"></script>
+
+
+</head> 
+<body>
+
+
+
+    <section class="page">
+
+        <header class="pageHeader clearfix">
+            <a href="/admin/index" class="logo clearfix">
+                <img src="ui/img/logo.png" alt="STA logo">
+                <span></span>
+            </a>
+            <aside class="userBar clearfix">
+                <form id="pos" class="posForm" action="/admin/posdropdown" method="POST">
+                    <select id="value" name="value" class="market chznSelect" onchange="this.form.submit()">
+                        <option value="1ASTAGLOBE-AU" selected="selected">AU</option>
+                        <option value="1ASTAGLOBE-GBBTW">BTW</option>
+                        <option value="1ASTAGLOBE-DE">DE</option>
+                        <option value="1ASTAGLOBE-FR">FR</option>
+                        <option value="1ASTAGLOBE-NZ">NZ</option>
+                        <option value="1ASTAGLOBE-SG">SG</option>
+                        <option value="1ASTAGLOBE-GB">UK</option>
+                        <option value="1ASTAGLOBE-US">US</option>
+                    </select>
+                </form>
+                <div class="userBox">
+                    <p>Welcome, <b>admin 2</b></p>
+                    <a href="/admin/j_spring_security_logout" class="logOut">Log Out</a>
+                </div>
+            </aside>
+        </header>
+
+
+
+        <section class="content clearfix">
+
+            <aside class="sidebar">
+                <ul class="sidebarNav">
+                    <li class="divider">Booking Engine</li>
+                    <li>
+                        <a href="#" class="hotels clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Hotels</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/hotels/search/cfg?productId=8"
+                               data-page-name="bookingEngineHotelsSearch">Search</a>
+                            <a href="/admin/hotels/results/cfg?productId=8"
+                               data-page-name="bookingEngineHotelsResults">Results</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="flights clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Flights</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/flights/search/cfg?productId=9"
+                               data-page-name="bookingEngineFlightsSearchConfig">Search</a>
+                            <a href="/admin/flights/results/cfg?productId=9"
+                               data-page-name="bookingEngineFlightsSearchResults">Results</a>
+                            <a href="/admin/flights/specialoffer/cfg?productId=9"
+                               data-page-name="bookingEngineFlightsSpecialOffer">Special offers calendar</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="insurancePage clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Insurance</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/insurance/search/cfg?productId=10"
+                               data-page-name="bookingEngineInsuranceSearch">Search</a>
+                            <a href="/admin/insurance/results/cfg?productId=10"
+                               data-page-name="bookingEngineInsuranceResults">Results</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="generalConfigPage clearfix">
+                            <span class="icon"></span>
+                            <span class="title extraline">General <span>Configuration</span></span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/general/content/cfg?productId=11"
+                               data-page-name="bookingEngineContentConfig">Content</a>
+                            <a href="/admin/interstitial/flights"
+                               data-page-name="bookingEngineFlightInterstitials">Flight Interstitials</a>
+                            <a href="/admin/general/livechat/cfg?productId=11"
+                               data-page-name="bookingEngineLiveChatConfig">Live Chat</a>
+                            <a href="/admin/general/ui/cfg?productId=11"
+                               data-page-name="bookingEngineCustomUIConfig">Custom UI</a>
+                            <a href="/admin/general/cookies/cfg?productId=11"
+                               data-page-name="bookingEngineCookiesConfig">Cookies</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/admin/aircrosssell/cfg?productId=12" class="crossSellLink clearfix"
+                           data-page-name="bookingEngineAirCrossSell">
+                            <span class="icon"></span>
+                            <span class="title extraline">Air <span>Cross Sell</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/checkout/cfg?productId=13" class="checkoutLink clearfix"
+                           data-page-name="bookingEngineCheckout">
+                            <span class="icon"></span>
+                            <span class="title">Checkout</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/visa/cfg?productId=14" class="visaLink clearfix" data-page-name="bookingEngineVisa">
+                            <span class="icon"></span>
+                            <span class="title">Visa</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/discountcard/cfg?productId=15" class="discountCardsLink clearfix"
+                           data-page-name="bookingEngineDiscountCards">
+                            <span class="icon"></span>
+                            <span class="title">Discount Cards</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/giftcard/cfg?productId=20" class="giftCardLink clearfix"
+                           data-page-name="bookingEngineGiftCards">
+                            <span class="icon"></span>
+                            <span class="title">Gift Card</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" class="interstitials clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Interstitials</span>
+                        </a>
+
+                        <div class="subNav" style="display: none;">
+                            <a href="intertitials_flight.html" data-page-name="bookingEngineInterstitialsFlight">Flight Interstitials</a>
+                            <a href="/admin/interstitials/hotel/banners?productId=33" data-page-name="bookingEngineInterstitialsHotel">Hotel Interstitials</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+                    <li class="divider">Merchandising</li>
+
+
+                    <li>
+                        <a href="#" class="flights clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Flights</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="http://s607650rgvl157.bluee.net:8080/sta-file-importer/pages/controller?command=VIEW_IMPORT_DIALOG"
+                               data-page-name="merchandisingFlightsGeneralConfig">General Config</a>
+                            <a href="http://s607650rgvl157.bluee.net:8080/sta-file-importer/pages/controller?command=VIEW_IMPORT_DIALOG"
+                               data-page-name="merchandisingFlightsBlacklisting">Blacklisting</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="#" class="insurancePage clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Insurance</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/merchandising/insurance/policy_mapping"
+                               data-page-name="merchandisingInsurancePolicyMapping">Insurance Policy Mapping</a>
+                            <a href="/admin/merchandising/insurance/admin" data-page-name="merchandisingInsuranceAdmin">Insurance
+                                Admin</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="http://10.83.17.124:8080/AdmSystem/Post_Approval?lang=en"
+                           class="destinationHub clearfix" target="_blank">
+                            <span class="icon"></span>
+                            <span class="title extraline">Destination <span>Hub</span></span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/main/markets?productId=7" class="hotels clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Hotels</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" class="contactUs clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Contact Us</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/store/cfg?productId=28" data-page-name="contactUsStores">Store</a>
+                            <a href="/admin/expert/cfg?productId=28" data-page-name="contactUsTravelExperts">Travel
+                                Experts</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li class="divider">Booking Engine Text</li>
+
+
+                    <li>
+                        <a href="#" class="onPageText clearfix">
+                            <span class="icon"></span>
+                            <span class="title">On Page Text</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/resourcebundle/1/1?productId=17"
+                               data-page-name="resourcebundles_air">Air</a>
+                            <a href="/admin/resourcebundle/1/2?productId=17"
+                               data-page-name="resourcebundles_hotel">Hotel</a>
+                            <a href="/admin/resourcebundle/1/3?productId=17"
+                               data-page-name="resourcebundles_insurance">Insurance</a>
+                            <a href="/admin/resourcebundle/1/4?productId=17"
+                               data-page-name="resourcebundles_visa">Visa</a>
+                            <a href="/admin/resourcebundle/1/5?productId=17"
+                               data-page-name="resourcebundles_discountcard">Discount Card</a>
+                            <a href="/admin/resourcebundle/1/6?productId=17"
+                               data-page-name="resourcebundles_giftcard">Gift Card</a>
+                            <a href="/admin/resourcebundle/1/7?productId=17"
+                               data-page-name="resourcebundles_shoppingcart">Shopping Cart</a>
+                            <a href="/admin/resourcebundle/1/8?productId=17"
+                               data-page-name="resourcebundles_checkout">Checkout</a>
+                            <a href="/admin/resourcebundle/1/9?productId=17"
+                               data-page-name="resourcebundles_general">General</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <a href="#" class="errorMessages clearfix">
+                            <span class="icon"></span>
+                            <span class="title">Error Messages</span>
+                        </a>
+
+                        <div class="subNav">
+                            <a href="/admin/resourcebundle/2/1?productId=16"
+                               data-page-name="errormessages_air">Air</a>
+                            <a href="/admin/resourcebundle/2/2?productId=16"
+                               data-page-name="errormessages_hotel">Hotel</a>
+                            <a href="/admin/resourcebundle/2/3?productId=16"
+                               data-page-name="errormessages_insurance">Insurance</a>
+                            <a href="/admin/resourcebundle/2/4?productId=16"
+                               data-page-name="errormessages_visa">Visa</a>
+                            <a href="/admin/resourcebundle/2/5?productId=16"
+                               data-page-name="errormessages_discountcard">Discount Card</a>
+                            <a href="/admin/resourcebundle/2/6?productId=16"
+                               data-page-name="errormessages_giftcard">Gift Card</a>
+                            <a href="/admin/resourcebundle/2/7?productId=16"
+                               data-page-name="errormessages_shoppingcart">Shopping Cart</a>
+                            <a href="/admin/resourcebundle/2/8?productId=16"
+                               data-page-name="errormessages_checkout">Checkout</a>
+                            <a href="/admin/resourcebundle/2/9?productId=16"
+                               data-page-name="errormessages_general">General</a>
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li class="divider">Group/User Management</li>
+
+
+                    <li>
+                        <a href="/admin/groupmanagement/groups?productId=18" class="groupManageLink clearfix"
+                           data-page-name="groupManagement">
+                            <span class="icon"></span>
+                            <span class="title extraline">Group <span>Management</span></span>
+                        </a>
+                    </li>
+
+
+                    <li>
+
+
+                        <a href="/admin/usermanagement/users?productId=19"
+                           class="userManageLink clearfix"
+                           data-page-name="userManagement">
+                            <span class="icon"></span>
+                            <span class="title extraline">User <span>Management</span></span>
+                        </a>
+                    </li>
+
+
+                    <li>
+
+                        <a href="/admin/history/cfg?productId=21"
+                           class="adminUIHistoryLink clearfix" data-page-name="adminUIHistory">
+                            <span class="icon"></span>
+                            <span class="title extraline">Admin UI <span>History</span></span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" class="exportImportConfigLink clearfix">
+                            <span class="icon"></span>
+                            <span class="title extraline">Export / Import <span>Configuration</span></span>
+                        </a>
+
+                        <div class="subNav">
+
+                            <a href="/admin/export/cfg" data-page-name="exportConfig">Export Config</a>
+
+
+                            <a href="/admin/import/cfg" data-page-name="importConfig">Import Config</a>
+
+                            <span class="icon"></span>
+                        </div>
+                    </li>
+
+
+                    <li class="divider">Global Settings</li>
+
+
+                    <li>
+                        <a href="/admin/paymentcard/cfg?productId=25" class="paymentTypesLink clearfix"
+                           data-page-name="globalSettingsPaymentTypes">
+                            <span class="icon"></span>
+                            <span class="title">Payment Types</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/airline/3/11?productId=26" class="airlineNamesLink clearfix"
+                           data-page-name="airlinenames_airlinenames">
+                            <span class="icon"></span>
+                            <span class="title">Airline Names</span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="/admin/airline/4/12?productId=27" class="aircraftTypeLink clearfix"
+                           data-page-name="aircrafttype_aircrafttypes">
+                            <span class="icon"></span>
+                            <span class="title">Aircraft Type</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </aside>
+
+            <section class="main bookingEng bookingEngInterstitials" data-page-name="bookingEngineInterstitialsFlight" data-requet-type="flight">
+
+                <!-- Temporary Header -->
+                <header class="contentHeader clearfix">
+                    <h2>Global Settings</h2>
+                    <h1 class="mainTitle">Airline</h1>
+                    <span class="label editor">Editor</span>
+                </header>
+                <!-- end Temporary Header -->
+
+                <!-- *************************************************************************** -->
+                <!-- DEFAULT LOADING ANIMATIONS ************************************************ -->
+
+                <section class="pageContentSection clearfix" id="pageContentSection">
+
+                    <table class="resourceBundlesTable">
+                        <thead>
+                        <tr>
+                            <td class="airline-code">Airline Code</td>
+                            <td class="airline-name">Airline Name</td>
+                            <td class="flight-logo">Flight Logo</td>
+                            <td class="matrix-logo">Matrix Logo</td>
+                            <td class="edit">Edit</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>ALL 2</td>
+                            <td>All Airlines</td>
+                            <td></td>
+                            <td></td>
+                            <td class="editBtnCell"><button class="editBtn"></button></td>
+                        </tr>
+                        <tr>
+                            <td>MULTI_CARRIER</td>
+                            <td>Multi carrier</td>
+                            <td></td>
+                            <td></td>
+                            <td class="editBtnCell"><button class="editBtn"></button></td>
+                        </tr>
+                        <tr>
+                            <td>OPAQUE</td>
+                            <td>Opaque (Major)</td>
+                            <td></td>
+                            <td></td>
+                            <td class="editBtnCell"><button class="editBtn"></button></td>
+                        </tr>
+                        <tr>
+                            <td>ALL</td>
+                            <td>Generic</td>
+                            <td></td>
+                            <td></td>
+                            <td class="editBtnCell"><button class="editBtn genericEdit"></button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="btnBox clearfix addNewAirline">
+                        <button class="btn addNewInterstitialBtn" data-image-name="default">Add new Airline</button>
+                        <select class="chznSelect resourceSetCodeSelect selectAirline">
+                            <option value="default" selected disabled>Select Airline</option>
+                            <option value="value1">Option Value 1</option>
+                            <option value="value2">Option Value 2</option>
+                            <option value="value3">Option Value 3</option>
+                            <option value="value4">Option Value 4</option>
+                            <option value="value5">Option Value 5</option>
+                        </select>
+                    </div>
+
+
+
+                    <table class="resourceBundlesTable">
+                        <thead>
+                            <tr>
+                                <td class="airline-code">Airline Code</td>
+                                <td class="airline-name">Airline Name</td>
+                                <td class="flight-logo">Flight Logo</td>
+                                <td class="matrix-logo">Matrix Logo</td>
+                                <td class="edit">Edit <br> Delete</td>
+                            </tr>
+                        </thead>
+                        <tbody class="addNewAirlineTableBody">
+                            <!--
+                            <tr>
+                                <td rowspan="2">AA</td>
+                                <td rowspan="2">American Airlines</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2"></td>
+                                <td class="editBtnCell">
+                                    <button class="editBtn editBtnCellNewlyCreated"></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="removeBtnCell">
+                                    <button class="removeBtn"></button>
+                                </td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+
+
+
+
+
+                </section>
+
+            </section>
+        </section>
+
+    </section>
+    <script src="ui/js/add_airline.js" type="text/javascript"></script>
+
+</body>
+</html>

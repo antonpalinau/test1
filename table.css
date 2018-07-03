@@ -1,0 +1,163 @@
+
+.resourceBundlesTable {
+    width: 100%;
+    table-layout: fixed;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr, td, th {
+    vertical-align: middle;
+}
+
+thead {
+    background: #f3f3f3;
+    color: black;
+    font-weight: bold;
+}
+
+thead tr .airline-code {
+    width: 21%;
+}
+
+thead tr .airline-name {
+    width: 25%;
+}
+
+thead tr .flight-logo {
+    width: 23%;
+}
+
+thead tr .matrix-logo {
+    width: 24%;
+}
+
+thead tr .edit {
+    width: 7%;
+}
+
+.airline-code, .airline-name, .matrix-logo, .flight-logo, .edit {
+    border-right: 1px solid #e6e6e6;
+}
+
+thead td {
+    height: 30px;
+}
+
+td {
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px;
+    font-size: 14px;
+    border-right: 1px solid #e6e6e6;
+}
+
+.selectAirline {
+    margin: 20px 0;
+}
+
+.addNewAirline .chosen-container{
+    float: right;
+}
+
+.addNewAirline {
+    padding: 0;
+}
+
+.removeBtn {
+    background: url(../../ico/trash_can.png) 50% 50% no-repeat;
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    border-radius: 0px;
+}
+
+.removeBtnCell {
+    cursor: pointer;
+    padding: 0;
+}
+
+.removeBtn:hover {
+    border: 1px solid #ddd;
+}
+
+.addAirlinePopUpText {
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.interstitialPopup.default .logoImgBox .logoObject {
+    width: 300px;
+    height: 45px;
+}
+
+.interstitialPopup .logoImgBox .logoObject {
+    display: none;
+}
+.logoImgBox img.interstitialImg, .logoImgBox .logoObject {
+    display: block;
+    width: 299px;
+    height: 127px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.interstitialPopup.default .logoImgBox {
+    display: block;
+    width: 300px;
+    min-height: 45px;
+    margin: 20px auto 20px auto;
+}
+
+.interstitialUploadBox .logoImgBox {
+    margin: 20px 20px 25px 20px;
+    background: rgba(0,0,0,0.08);
+    display: inline-block;
+}
+
+.logoImgBox img.interstitialImg, .logoImgBox .logoObject {
+    display: block;
+    width: 299px;
+    height: 45px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.globalPopup .popupLogoUpdatingTitle {
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.editBtnCell {
+    cursor: pointer;
+    padding: 0;
+}
+
+.editBtn {
+    height: 100%;
+    width: 100%;
+    background: url(../../ico/edit_btn.png) 50% 50% no-repeat;
+    border-radius: 0px;
+    border: 0px solid transparent;
+    display: block;
+}
+
+
+.editBtn:active {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) inset;
+}
+
+.popUpRowOne {
+    display: none;
+}
+
+input[type="text"]:disabled {
+    background: #dddddd;
+}
